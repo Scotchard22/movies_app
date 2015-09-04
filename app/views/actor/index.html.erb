@@ -1,0 +1,11 @@
+<h1> Actors </h1>
+<p><%= link_to 'Add Actor', new_actor_path %>
+<% @actors.each do |actor| %>
+ <h2><%= actor.first_name %></h2>
+ <h3><%= actor.last_name %></h3>
+ <p><%= actor.age %></p>
+ <p><%= actor.born %></p>
+ <%= link_to 'Show Actor', actor_path(actor) %>
+ <%= link_to 'Edit Actor', edit_actor_path(actor) %>
+ <%= link_to 'Delete Actor', actor, method: :delete %>
+<% end %>
