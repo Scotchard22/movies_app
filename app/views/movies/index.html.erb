@@ -1,0 +1,12 @@
+<h1> Movies </h1>
+<p><%= link_to 'Add Movie', new_movie_path %></p>
+<% @movies.each do |movie| %>
+  <h2><%= movie.title %></h2>
+  <h3><%= movie.rating %></h3>
+  <p><%= movie.description %></p>
+  <p><%= movie.length %></p>
+ <%= link_to 'Show Movie', movie_path(movie) %>
+ <%= link_to 'Edit Movie', edit_movie_path(movie) %>
+ <%= link_to 'Delete Movie', movie, method: :delete %>
+<% end %>  
+

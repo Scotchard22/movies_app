@@ -1,0 +1,16 @@
+<h1> New Movie </h1>
+<%= form_for @movie do |f| %>
+  <%= f.label :title %>: 
+  <%= f.text_field :title %>
+
+  <%= f.label :rating %> 
+  <%= f.text_field :rating %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :length %>
+  <%= f.text_field :length %>
+
+  <%= f.submit %>
+<% end %>
