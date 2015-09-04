@@ -19,15 +19,10 @@
 body {
   text-align: center;
   background-color: lightgrey;
-  color: black;
+  color: white;
   font-family: comic;
-  font-size: 20px;
-  background-image: url('movie.jpg');
-  webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
+  font-size: 15px;
+  background: url("movie.jpg")
   }
 
 a{
@@ -40,26 +35,7 @@ a{
   display: inline-block;
   padding-left: 20px;
 
-}
 
-/* unvisited link */
-a:link {
-    color: #8F0000;
-}
-
-/* visited link */
-a:visited {
-    color: #8F0000;
-}
-
-/* mouse over link */
-a:hover {
-    color: #FFFFFF;
-}
-
-/* selected link */
-a:active {
-    color: #0000FF;
 }
 
 

@@ -1,17 +1,21 @@
-<h1> Movie </h1>
+<head>
+  <link rel="stylesheet" type="text/css" href="moviesite.css">
+</head>
+
+<h1> <u>Movie</u> </h1>
   <h2><%= @movie.title %></h2>
   <h3><%= @movie.rating %></h3>
   <p><%= @movie.description %></p>
   <p><%= @movie.length %></p>
-<div class= 'actors'>
-  <h1> Actors </h1>
+  <h1> <u>Actors</u> </h1>
   <% @movie.actors.each do |actor| %>
+<div class= 'actors'>
 <p>First Name: <%= actor.first_name %></p>
 <p>Last Name: <%= actor.last_name %></p>
 <p>Age: <%= actor.age %></p>
 <p>Date of birth: <%= actor.born %></p>
-<% end %>
 </div> 
+<% end %>
     <p><%= link_to 'Add Actors', new_movie_actor_path(@movie) %></p>
     <p><%= link_to 'Back', movies_path %></p>
 

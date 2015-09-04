@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  root 'movies#index'
 
   resources :movies do
     resources :actors 

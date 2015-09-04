@@ -35,7 +35,10 @@ ActiveRecord::Schema.define(version: 20150904203749) do
     t.integer  "length"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "actor_id_id"
   end
+
+  add_index "movies", ["actor_id_id"], name: "index_movies_on_actor_id_id", using: :btree
 
   add_foreign_key "actors", "movies"
 end
