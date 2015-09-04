@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   resources :movies
+  resources :actors
 
 
   # The priority is based upon order of creation: first created -> highest priority.
