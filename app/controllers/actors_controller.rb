@@ -1,4 +1,4 @@
-class ActorController < ApplicationController
+class ActorsController < ApplicationController
   def index
     @actors = Actor.all
   end
@@ -9,13 +9,15 @@ class ActorController < ApplicationController
 
   def new
     @actor = Actor.new
+    @movie = params[:movie_id]
   end
 
 def create
    @actor = Actor.new(actor_params)
- 
+   @actor.movie_id = params[:movie_id]
+    
    if @actor.save
-     redirect_to actors_path
+     redirect_to movie_path(params[:movie_id])
    else
      render :new
    end
